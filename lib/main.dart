@@ -1,7 +1,7 @@
 import 'package:anomana/screens/dashboard.dart';
 import 'package:anomana/screens/ingredient.dart';
 import 'package:anomana/screens/menu.dart';
-import 'package:anomana/screens/recette.dart';
+import 'package:anomana/screens/recette/recette_flow.dart';
 import 'package:anomana/utils/color_pattern.dart';
 import 'package:anomana/widgets/sidebar_button.dart';
 import 'package:flutter/material.dart';
@@ -161,7 +161,7 @@ class _ContentArea extends StatelessWidget {
       case "menu":
         return MenuScreen(onNavigate: onNavigate);
       case "recette":
-        return RecetteScreen();
+        return RecetteFlow(onNavigate: onNavigate);
       case "ingrédients":
         return IngredientScreen(onNavigate: onNavigate);
       default:

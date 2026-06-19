@@ -89,11 +89,12 @@ class _IngredientScreenState extends State<IngredientScreen> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Ingrédients',
-            style: theme.textTheme.headlineMedium?.copyWith(
+            'Ingrédient',
+            style: theme.textTheme.headlineLarge?.copyWith(
               fontWeight: FontWeight.bold,
             ),
           ),
+          Divider(height: 32),
           const SizedBox(height: 20),
           Expanded(
             child: Row(
@@ -257,6 +258,7 @@ class _IngredientScreenState extends State<IngredientScreen> {
                                                   _showEditIngredientDialog(
                                                     ingredient,
                                                   ),
+                                              tooltip: "Modifier l'ingrédient",
                                             ),
                                             IconButton(
                                               icon: const Icon(Icons.delete),
@@ -264,6 +266,7 @@ class _IngredientScreenState extends State<IngredientScreen> {
                                                   _showDeleteIngredientDialog(
                                                     ingredient.id!,
                                                   ),
+                                              tooltip: "Supprimer l'ingrédient",
                                             ),
                                           ],
                                         ),
