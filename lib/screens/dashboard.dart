@@ -94,7 +94,6 @@ class DashboardScreen extends StatelessWidget {
     );
   }
 
-  // Helper method for stat cards
   Widget _buildStatCard(
     BuildContext context, {
     required IconData icon,

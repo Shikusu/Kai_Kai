@@ -108,7 +108,7 @@ class _Sidebar extends StatelessWidget {
       decoration: BoxDecoration(
         color: theme.colorScheme.surface,
         boxShadow: [
-          BoxShadow(blurRadius: 10, color: Colors.black.withOpacity(0.1)),
+          BoxShadow(blurRadius: 10, color: Colors.black.withValues(alpha: 0.1)),
         ],
       ),
       child: Column(
@@ -163,7 +163,7 @@ class _ContentArea extends StatelessWidget {
       case "recette":
         return RecetteScreen();
       case "ingrédients":
-        return IngredientScreen();
+        return IngredientScreen(onNavigate: onNavigate);
       default:
         return SizedBox.shrink();
     }
@@ -175,7 +175,7 @@ class _ContentArea extends StatelessWidget {
 
     return Container(
       padding: const EdgeInsets.all(32),
-      color: theme.colorScheme.background,
+      color: theme.colorScheme.surface,
       child: Card(
         elevation: 2,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
