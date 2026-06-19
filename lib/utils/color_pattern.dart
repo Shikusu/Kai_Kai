@@ -1,40 +1,24 @@
 import 'package:flutter/material.dart';
 
-ColorScheme lightColorScheme = const ColorScheme(
-  brightness: Brightness.light,
-  primary: Color(0xFFE94E1B), // tomato
-  onPrimary: Colors.white,
-  secondary: Color(0xFFFAE3D9), // cocoa
-  onSecondary: Colors.black,
-  error: Colors.red,
-  onError: Colors.white,
-  surface: Color(0xFFFAE3D9), // cocoa
-  onSurface: Colors.black,
-);
-
-ColorScheme darkColorScheme = const ColorScheme(
-  brightness: Brightness.dark,
-  primary: Color(0xFFE94E1B), // tomato
-  onPrimary: Colors.white,
-  secondary: Color(0xFFFAE3D9), // cocoa
-  onSecondary: Colors.black,
-  error: Colors.red,
-  onError: Colors.white,
-  surface: Color(0xFF2A2A2A), // dark surface
-  onSurface: Colors.white,
-);
-
 final lightTheme = ThemeData(
   brightness: Brightness.light,
-  colorScheme: lightColorScheme,
-  scaffoldBackgroundColor: lightColorScheme.surface,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: const Color(0xFFE94E1B), // tomato
+    surfaceTint: const Color(0xFFFFF8F2), // cream
+    surface: const Color(0xFFFAE3D9), // cocoa
+    brightness: Brightness.light, // Ensure brightness matches
+  ),
   useMaterial3: true,
 );
 
 final darkTheme = ThemeData(
   brightness: Brightness.dark,
-  colorScheme: darkColorScheme,
-  scaffoldBackgroundColor: darkColorScheme.surface,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: const Color(0xFF8B1E3F), // wine
+    surfaceTint: const Color(0xFF1E1E1E),
+    surface: const Color(0xFF2A2A2A),
+    brightness: Brightness.dark, // Ensure brightness matches
+  ),
   useMaterial3: true,
 );
 
