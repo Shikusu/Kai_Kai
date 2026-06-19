@@ -324,7 +324,7 @@ class _IngredientScreenState extends State<IngredientScreen> {
             onPressed: () async {
               await _ingredientRepo.delete(ingredientId);
               await _loadData();
-              if (mounted) {
+              if (context.mounted) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('Ingrédient supprimé')),
                 );
